@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Print styles for PDF export */
+@media print {
+  .no-print { display: none !important; }
+  header, footer, nav { display: none !important; }
+  .shadow, .shadow-sm, .shadow-md, .shadow-lg, .shadow-xl { box-shadow: none !important; }
+  .bg-gradient-to-b { background: #ffffff !important; }
+  html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  @page { size: A4; margin: 12mm; }
+}
